@@ -1031,35 +1031,6 @@ These items should remain separate from the committed initial architecture until
 
 ---
 
-## Open Decisions
-
-The specification includes decisions that require explicit approval before they are treated as final behavior.
-
-### Full AI Response Storage
-
-The initial recommended direction is **metadata/evidence only** rather than automatically storing complete target responses.
-
-Reasons include:
-
-- potentially sensitive response content;
-- storage growth;
-- privacy considerations;
-- the fact that complete response archiving is not required for the core automation workflow.
-
-Any change to this behavior should be made through the project's decision register and traceability process.
-
----
-
-## Change Control
-
-The Phase 1 specification defines a formal change-control rule:
-
-> Changes to confirmed requirements, architecture, the state model, database contracts, or safety-critical behavior must be recorded in the Decision Register and Requirements Traceability Matrix before implementation changes are accepted.
-
-This protects the core system contract as later phases are implemented.
-
----
-
 ## Contributing
 
 Contributions should improve the implementation without weakening the project's local-first architecture, safety boundaries, or recoverability guarantees.
@@ -1073,73 +1044,6 @@ Contributions should improve the implementation without weakening the project's 
 - Documentation.
 - Diagnostics and observability.
 - Packaging and maintenance tooling.
-
-### Contribution rules
-
-- Do not submit credentials, cookies, session dumps, browser profiles, or other authentication secrets.
-- Do not include real private prompt content or private files in issues or pull requests.
-- Add or update tests when changing task, scheduling, adapter, queue, or recovery behavior.
-- Changes to confirmed requirements or safety-critical behavior must follow the project's change-control process.
-
----
-
-## Security Reporting
-
-Please report security-sensitive issues responsibly rather than posting secrets or exploit details in public issues.
-
-Relevant reports include:
-
-- credential exposure;
-- unsafe file handling;
-- local API security problems;
-- automation session leaks;
-- sensitive-log exposure;
-- unsafe recovery or duplicate-submission behavior.
-
-Do not post passwords, cookies, authentication tokens, private files, or browser-profile data in public repository artifacts.
-
----
-
-## Documentation
-
-The repository structure reserves a `docs/` directory for project documentation.
-
-Recommended documentation areas include:
-
-```text
-docs/
-├── SETUP.md
-├── DEVELOPMENT.md
-├── TROUBLESHOOTING.md
-└── PHASE_2_COMPLETION_REPORT.md
-```
-
-These files should be linked from this README only when they actually exist in the repository.
-
-The authoritative Phase 1 specification is the project's **System Specification**. If `SYSTEM_SPECIFICATION.pdf` is committed to the repository, it can be linked here directly.
-
----
-
-## Support the Project
-
-If this project is useful to you:
-
-- ⭐ Star the repository.
-- 👀 Watch the project for updates.
-- 🐛 Open an issue for reproducible bugs.
-- 💡 Suggest focused improvements.
-- 🧪 Contribute tests and adapter coverage.
-- 📚 Improve documentation.
-
-Repository metrics are intentionally not hard-coded into this README. The badge placeholders at the top should be replaced with the real GitHub repository path before publication.
-
----
-
-## License
-
-**License: Not yet specified.**
-
-Do not assume or add a license until the repository contains an explicit license decision/file.
 
 ---
 
@@ -1225,23 +1129,6 @@ Do not assume or add a license until the repository contains an explicit license
 | **Fixed-Delay recurrence** | Next run based on completion of the previous successful run. |
 | **Interactive Session** | A usable Windows user session in which GUI automation can operate. |
 | **Evidence** | Safe diagnostic information showing what happened during execution. |
-
----
-
-## README Accuracy Notes
-
-This README intentionally avoids claims that cannot be verified from the available project materials:
-
-- no fabricated stars, forks, downloads, coverage, contributors, or releases;
-- no invented repository URL or GitHub username;
-- no invented license;
-- no invented screenshots or demo links;
-- no claim of production readiness;
-- no cloud/VPS/Oracle architecture;
-- no unsupported AI providers;
-- no claims that later implementation phases are complete.
-
-Before publishing, replace the `YOUR_GITHUB_USERNAME/YOUR_REPOSITORY` placeholders in the repository metric badges with the actual repository slug.
 
 ---
 
