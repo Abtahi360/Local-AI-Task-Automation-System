@@ -12,9 +12,9 @@
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4?style=flat-square&logo=windows&logoColor=white)](#installation-prerequisites)
 [![Git](https://img.shields.io/badge/tooling-Git-F05032?style=flat-square&logo=git&logoColor=white)](#technology-stack)
 
-[![Stars](https://img.shields.io/github/stars/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY?style=flat-square)](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY)
-[![Forks](https://img.shields.io/github/forks/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY?style=flat-square)](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY)
-[![Issues](https://img.shields.io/github/issues/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY?style=flat-square)](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY/issues)
+[![Stars](https://img.shields.io/github/stars/Abtahi360/Local-AI-Task-Automation-System?style=flat-square)](https://github.com/Abtahi360/Local-AI-Task-Automation-System)
+[![Forks](https://img.shields.io/github/forks/Abtahi360/Local-AI-Task-Automation-System?style=flat-square)](https://github.com/Abtahi360/Local-AI-Task-Automation-System)
+[![Issues](https://img.shields.io/github/issues/Abtahi360/Local-AI-Task-Automation-System?style=flat-square)](https://github.com/Abtahi360/Local-AI-Task-Automation-System/issues)
 
 **Schedule once. Execute locally. Resume reliably. Sleep when safe.**
 
