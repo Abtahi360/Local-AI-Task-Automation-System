@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local AI Task Automation System</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Local AI Task Automation System</h1>
+      <p class="phase" id="phase">Phase 2 &mdash; Development Environment Setup</p>
+    </header>
+
+    <section aria-labelledby="env-heading">
+      <h2 id="env-heading">Environment status</h2>
+      <dl class="status" id="status-list">
+        <div class="row" data-key="backend">
+          <dt>Backend</dt>
+          <dd><span class="badge pending">Checking</span></dd>
+        </div>
+        <div class="row" data-key="database">
+          <dt>Database</dt>
+          <dd><span class="badge pending">Checking</span></dd>
+        </div>
+        <div class="row" data-key="python">
+          <dt>Python environment</dt>
+          <dd><span class="badge pending">Checking</span></dd>
+        </div>
+      </dl>
+      <p class="message" id="message" role="status" aria-live="polite">Contacting the local backend&hellip;</p>
+      <button type="button" id="recheck">Check again</button>
+    </section>
+
+    <section aria-labelledby="details-heading">
+      <h2 id="details-heading">Details</h2>
+      <dl class="details" id="details"></dl>
+    </section>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

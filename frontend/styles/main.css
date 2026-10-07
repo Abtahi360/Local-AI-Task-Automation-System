@@ -1,0 +1,101 @@
+:root {
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --ink: #1d2521;
+  --muted: #55615b;
+  --line: #d5dad4;
+  --ok-bg: #dff1e4;
+  --ok-ink: #14532d;
+  --warn-bg: #fbefc9;
+  --warn-ink: #6b4a00;
+  --err-bg: #f9dcdc;
+  --err-ink: #7a1414;
+  --pend-bg: #e7eaee;
+  --pend-ink: #3b4450;
+  --focus: #1f5fbf;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14181a;
+    --surface: #1d2326;
+    --ink: #e8ece9;
+    --muted: #a3afa8;
+    --line: #333c40;
+    --ok-bg: #173a24;
+    --ok-ink: #b7ebc6;
+    --warn-bg: #43350d;
+    --warn-ink: #f4dc92;
+    --err-bg: #4a1c1c;
+    --err-ink: #f6bcbc;
+    --pend-bg: #2a3238;
+    --pend-ink: #c4ccd3;
+    --focus: #7fb0ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+h1 { margin: 0 0 .25rem; font-size: 1.6rem; font-weight: 650; letter-spacing: -.01em; }
+h2 { margin: 2rem 0 .75rem; font-size: 1.05rem; font-weight: 600; }
+.phase { margin: 0; color: var(--muted); }
+
+dl { margin: 0; }
+
+.status, .details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.row, .details > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: .7rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.row:last-child, .details > div:last-child { border-bottom: 0; }
+
+dt { color: var(--muted); }
+dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+
+.badge {
+  display: inline-block;
+  padding: .1rem .6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .9rem;
+}
+.badge.ok { background: var(--ok-bg); color: var(--ok-ink); }
+.badge.warn { background: var(--warn-bg); color: var(--warn-ink); }
+.badge.error { background: var(--err-bg); color: var(--err-ink); }
+.badge.pending { background: var(--pend-bg); color: var(--pend-ink); }
+
+.message { margin: 1rem 0; }
+
+button {
+  font: inherit;
+  padding: .45rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+button:hover { border-color: var(--muted); }
+button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
