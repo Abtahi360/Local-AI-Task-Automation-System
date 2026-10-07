@@ -1,0 +1,55 @@
+# Project metadata and tool configuration.
+#
+# Dependency strategy (single source of truth, no contradictions):
+#   * requirements.txt      -> authoritative RUNTIME pins
+#   * requirements-dev.txt  -> authoritative DEV pins (includes requirements.txt)
+#   * pyproject.toml        -> Python version constraint + tool configuration.
+#                              Runtime dependencies below are read FROM requirements.txt.
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-ai-task-automation"
+version = "0.2.0"
+description = "Local-first Windows application for scheduling and executing AI task automation."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["backend*", "agent*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "windows_only: test only meaningful on Windows",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", "migrations/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true
+exclude = ["^\\.venv/", "^migrations/versions/"]

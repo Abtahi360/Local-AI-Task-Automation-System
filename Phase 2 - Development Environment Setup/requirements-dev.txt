@@ -1,0 +1,15 @@
+# Development / test / quality tooling. Includes the runtime requirements.
+#     python -m pip install -r requirements-dev.txt
+-r requirements.txt
+
+# --- Testing ---
+pytest==9.1.1
+pytest-asyncio==1.4.0
+httpx==0.28.1
+# Starlette 1.x TestClient prefers httpx2 (httpx is deprecated there); tests use httpx2 via TestClient.
+httpx2==2.13.1
+
+# --- Code quality ---
+ruff==0.16.10
+black==26.10.0
+mypy==2.4.0
